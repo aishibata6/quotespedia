@@ -1,0 +1,10 @@
+.header nav li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.header a:hover,
+.header a:active,
+.header a.active {
+  color: red;
+}
