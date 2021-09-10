@@ -4,9 +4,9 @@ import styles from "./MainHeader.module.css";
 const MainHeader = () => {
   return (
     <header className={styles.header}>
+      <div className={styles.logo}>Quotespedia</div>
       <nav>
         <ul>
-          <li>Quotespedia</li>
           <li>
             <NavLink activeClassName={styles.active} to="/all-quotes">
               All Quotes

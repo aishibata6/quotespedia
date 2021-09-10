@@ -1,13 +1,28 @@
-import {Route} from "react-router-dom";
-import QuoteDetail from "./QuoteDetail";
+import QuoteList from "../components/quotes/QuoteList";
+
+const DUMMY_QUOTES = [
+  {
+    id: "q1",
+    author: "Max",
+    text: "Learning React is fun!",
+  },
+  {
+    id: "q2",
+    author: "Ai",
+    text: "Yes",
+  },
+  {
+    id: "q3",
+    author: "Kevin",
+    text: "Seriously",
+  },
+];
 
 const AllQuotes = () => {
   return (
     <section>
       <h1>All Quotes</h1>
-      <Route path="/quote-detail/:quoteId">
-        <QuoteDetail />
-      </Route>
+      <QuoteList quotes={DUMMY_QUOTES} />
     </section>
   );
 };
