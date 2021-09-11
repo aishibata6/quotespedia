@@ -4,6 +4,7 @@ import AddAQuote from "./pages/AddAQuote";
 import AllQuotes from "./pages/AllQuotes";
 import QuoteDetail from "./pages/QuoteDetail";
 import Layout from "./components/layout/Layout";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
         </Route>
         <Route path="/add-a-quote">
           <AddAQuote />
+        </Route>
+        {/* any URL will match * (setting up 404 page) */}
+        <Route path="*">
+          <NotFound />
         </Route>
       </Switch>
     </Layout>

@@ -1,8 +1,14 @@
+// use useHistory to set up redirect to happen automatically when the form is submitted
+import {useHistory} from "react-router-dom";
+
 import QuoteForm from "../components/quotes/QuoteForm";
 
 const AddAQuote = () => {
+  const history = useHistory();
+
   const addQuoteHandler = (quoteData) => {
     console.log(quoteData);
+    history.push("/all-quotes");
   };
   return (
     <section>
